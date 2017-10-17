@@ -15,6 +15,11 @@ import { AuthService } from '../providers/auth/auth.service';
 import { SignPage } from '../pages/sign/sign';
 import { CustomLoggedHeaderComponent } from '../components/custom-logged-header/custom-logged-header.component';
 import { CaptalizePipe } from './../pipes/captalize/captalize.pipe';
+import { ChatService } from '../providers/chat/chat.service';
+import { MessageService } from '../providers/message/message.service';
+import { MessageBoxComponent } from './../components/message-box/message-box.component';
+import { UserInfoComponent } from './../components/user-info/user-info.component';
+import { UserMenuComponent } from './../components/user-menu/user-menu.component';
 
 const firebaseAppConfig: FirebaseAppConfig = {
   apiKey: "AIzaSyAMvAj5CJf7u9vY8CcTRpsZVyHGx_kUkAU",
@@ -36,6 +41,9 @@ const firebaseAuthConfig = {
     CustomLoggedHeaderComponent,
     MyApp,
     HomePage,
+    MessageBoxComponent,
+    UserInfoComponent,
+    UserMenuComponent,
     SignPage,
     SignupPage
   ],
@@ -60,6 +68,8 @@ const firebaseAuthConfig = {
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     UserService,
+    ChatService,
+    MessageService,
   ]
 })
 export class AppModule { }
