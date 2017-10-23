@@ -1,4 +1,3 @@
-import { ChatPage } from './../pages/chat/chat';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -8,6 +7,7 @@ import { HttpModule } from '@angular/http'
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ChatPage } from './../pages/chat/chat';
 import { SignupPage } from './../pages/signup/signup';
 import { FirebaseAppConfig, AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
 import { UserService } from '../providers/user/user.service';
@@ -20,6 +20,8 @@ import { MessageService } from '../providers/message/message.service';
 import { MessageBoxComponent } from './../components/message-box/message-box.component';
 import { UserInfoComponent } from './../components/user-info/user-info.component';
 import { UserMenuComponent } from './../components/user-menu/user-menu.component';
+import { UserProfilePage } from './../pages/user-profile/user-profile';
+import { ProgressBarComponent } from './../components/progress-bar/progress-bar.component';
 
 const firebaseAppConfig: FirebaseAppConfig = {
   apiKey: "AIzaSyAMvAj5CJf7u9vY8CcTRpsZVyHGx_kUkAU",
@@ -43,9 +45,11 @@ const firebaseAuthConfig = {
     HomePage,
     MessageBoxComponent,
     UserInfoComponent,
+    ProgressBarComponent,
     UserMenuComponent,
     SignPage,
-    SignupPage
+    SignupPage,
+    UserProfilePage,
   ],
   imports: [
     BrowserModule,
@@ -57,10 +61,15 @@ const firebaseAuthConfig = {
   entryComponents: [
     ChatPage,
     CustomLoggedHeaderComponent,
+    MessageBoxComponent,
+    UserInfoComponent,
+    ProgressBarComponent,
+    UserMenuComponent,
     MyApp,
     HomePage,
     SignPage,
-    SignupPage
+    SignupPage,
+    UserProfilePage,
   ],
   providers: [
     AuthService,

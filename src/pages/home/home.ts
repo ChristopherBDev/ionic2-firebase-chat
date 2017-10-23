@@ -1,18 +1,14 @@
-import { ChatPage } from './../chat/chat';
-import { SignPage } from './../sign/sign';
 import { Component } from '@angular/core';
-
 import { NavController, MenuController } from 'ionic-angular';
-
 import { FirebaseListObservable } from 'angularfire2';
 
-import { AuthService } from './../../providers/auth/auth.service';
-
+import { ChatPage } from './../chat/chat';
 import { SignupPage } from './../signup/signup';
-import { User } from '../../../models/user.model';
+import { AuthService } from './../../providers/auth/auth.service';
 import { UserService } from '../../providers/user/user.service';
 import { ChatService } from '../../providers/chat/chat.service';
-import { Chat } from '../../../models/chat.model';
+import { User } from '../../models/user.model';
+import { Chat } from '../../models/chat.model';
 
 import firebase from 'firebase';
 

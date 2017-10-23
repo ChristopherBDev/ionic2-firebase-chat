@@ -2,5 +2,7 @@
   "name": "Ionic2FirebaseChat",
   "app_id": "ae9839e2",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

@@ -1,5 +1,5 @@
 import { UserService } from './../providers/user/user.service';
-import { AuthMethods, FirebaseAuthState } from 'angularfire2';
+import { FirebaseAuthState } from 'angularfire2';
 import { AuthService } from './../providers/auth/auth.service';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { SignPage } from './../pages/sign/sign';
-import { User } from '../../models/user.model';
+import { User } from '../models/user.model';
 
 @Component({
   templateUrl: 'app.html'
